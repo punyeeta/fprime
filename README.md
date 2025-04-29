@@ -1,5 +1,5 @@
 
-# Calculator Application
+# f'prime: Calculus-Powered Graphing App
 ![image](https://github.com/user-attachments/assets/4472d1e1-0059-49f9-8315-00113541988a)
 A Python-based calculator application with a graphical user interface built using tkinter. This application allows users to input mathematical functions and perform numerical integration.
 
