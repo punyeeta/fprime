@@ -1,4 +1,4 @@
-# Calculator Application
+![image](https://github.com/user-attachments/assets/52d2519b-5ce8-4a35-b62d-bd4528211864)# Calculator Application
 
 A Python-based calculator application with a graphical user interface built using tkinter. This application allows users to input mathematical functions and perform numerical integration.
 
@@ -56,7 +56,7 @@ python gui.py
 
 ## Usage
 
-1. Enter a mathematical function in the input field using Python syntax (e.g., `x**2 + 3*x + 5`)
+1. Enter a mathematical function in the input field using Python syntax (e.g., `x**3-3*x`)
 2. Enter the lower and upper limits for integration
 3. Click the "Calculate" button to compute the integral
 4. The result will be displayed in the "Result for numerical integration" field
