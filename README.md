@@ -19,7 +19,7 @@ calculator/
 
 ## Features
 
-- Input mathematical functions using Python syntax (e.g., `x**2 + 3*x + 5`)
+- Input mathematical functions using Python syntax (e.g., `x**3-3*x`)
 - Calculate numerical integrals using scipy.integrate.quad()
 - Display integration results
 - Modern and user-friendly interface
