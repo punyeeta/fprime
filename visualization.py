@@ -10,9 +10,9 @@ def numerical_derivative(func, x, h=0.0001):
     """Compute derivative using central difference method"""
     return (func(x + h) - func(x - h)) / (2 * h)
 
-def plot_function_with_calculus(func, x_min, x_max, num_points=1000):
+def plot_function_with_separated_calculus(func, x_min, x_max, num_points=1000):
     """
-    Plot a function, its derivative, and its integral
+    Plot a function, its derivative, and its integral in side-by-side subplots
     
     Parameters:
     - func: The function to visualize
@@ -34,32 +34,38 @@ def plot_function_with_calculus(func, x_min, x_max, num_points=1000):
         # Numerical integration using scipy's quad
         y_integral[i], _ = integrate.quad(func, x_min, x[i])
     
-    # Create the plot with a clear figure size
-    plt.figure(figsize=(10, 6))
+    # Create a figure with 3 side-by-side subplots
+    fig, axs = plt.subplots(1, 3, figsize=(15, 5))
     
-    # Plot original function
-    plt.plot(x, y, 'b-', linewidth=2, label='f(x)')
+    # Plot 1: Original function
+    axs[0].plot(x, y, 'b-', linewidth=2)
+    axs[0].set_title('Original Function', fontsize=12)
+    axs[0].grid(True, linestyle='--', alpha=0.7)
+    axs[0].axhline(y=0, color='k', linestyle='-', alpha=0.3)
+    axs[0].axvline(x=0, color='k', linestyle='-', alpha=0.3)
+    axs[0].set_xlabel('x', fontsize=12)
+    axs[0].set_ylabel('f(x)', fontsize=12)
     
-    # Plot derivative
-    plt.plot(x, y_prime, 'r-', linewidth=2, label="f'(x)")
+    # Plot 2: Derivative
+    axs[1].plot(x, y_prime, 'r-', linewidth=2)
+    axs[1].set_title('First Derivative', fontsize=12)
+    axs[1].grid(True, linestyle='--', alpha=0.7)
+    axs[1].axhline(y=0, color='k', linestyle='-', alpha=0.3)
+    axs[1].axvline(x=0, color='k', linestyle='-', alpha=0.3)
+    axs[1].set_xlabel('x', fontsize=12)
+    axs[1].set_ylabel('f\'(x)', fontsize=12)
     
-    # Plot integral
-    plt.plot(x, y_integral, 'g-', linewidth=2, label='∫f(x)dx')
+    # Plot 3: Integral
+    axs[2].plot(x, y_integral, 'g-', linewidth=2)
+    axs[2].set_title('Integral', fontsize=12)
+    axs[2].grid(True, linestyle='--', alpha=0.7)
+    axs[2].axhline(y=0, color='k', linestyle='-', alpha=0.3)
+    axs[2].axvline(x=0, color='k', linestyle='-', alpha=0.3)
+    axs[2].set_xlabel('x', fontsize=12)
+    axs[2].set_ylabel('∫f(x)dx', fontsize=12)
     
-    # Add grid for better readability
-    plt.grid(True, linestyle='--', alpha=0.7)
-    
-    # Add reference lines for x=0 and y=0
-    plt.axhline(y=0, color='k', linestyle='-', alpha=0.3)
-    plt.axvline(x=0, color='k', linestyle='-', alpha=0.3)
-    
-    # Add title and labels
-    plt.title('Function with its Derivative and Integral', fontsize=14)
-    plt.xlabel('x', fontsize=12)
-    plt.ylabel('y', fontsize=12)
-    
-    # Add legend with clear positioning
-    plt.legend(loc='best', fontsize=12)
+    # Add an overall title
+    fig.suptitle('Function Calculus Visualization', fontsize=16)
     
     # Make sure everything fits nicely
     plt.tight_layout()
@@ -84,4 +90,4 @@ if __name__ == "__main__":
             print("Invalid range arguments. Using default range.")
     
     # Visualize the function in the specified range
-    plot_function_with_calculus(f, x_min, x_max)
+    plot_function_with_separated_calculus(f, x_min, x_max)
