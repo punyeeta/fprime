@@ -1,18 +1,18 @@
-
 # f'prime: Calculus-Powered Graphing App
-![image](https://github.com/user-attachments/assets/7511ab89-9018-4e23-beae-a4cc6bf85683)
 
 A Python-based calculator application with a graphical user interface built using tkinter. This application allows users to input mathematical functions and perform numerical integration.
 
 ## Project Structure
 
 ```
-calculator/
+fprime/
 ├── assets/
 │   ├── fonts/
 │   │   └── Poppins-Medium.ttf
 │   └── frame0/
 │       └── (image assets)
+├── build/
+│   └── requirements.txt
 ├── gui.py
 ├── integration.py
 └── README.md
@@ -29,22 +29,22 @@ calculator/
 
 - Python 3.6 or higher
 - tkinter (usually comes with Python)
-- pyglet
-- sympy
-- scipy
-- numpy
+- pyglet>=1.5.0
+- sympy>=1.8
+- scipy>=1.7.0
+- numpy>=1.20.0
 
 ## Installation
 
 1. Clone this repository:
    ```
-   git clone https://github.com/yourusername/calculator.git
-   cd calculator
+   git clone https://github.com/punyeeta/fprime.git
+   cd fprime
    ```
 
 2. Install the required packages:
    ```
-   pip install pyglet sympy scipy numpy
+   pip install -r build/requirements.txt
    ```
 
 3. Make sure the Poppins-Medium.ttf font is in the `assets/fonts/` directory.
@@ -71,4 +71,4 @@ python gui.py
 
 ## License
 
-[Your chosen license] 
+MIT License 
