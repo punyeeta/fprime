@@ -45,7 +45,7 @@ fprime/
 
 2. Install the required packages:
    ```
-   pip install -r build/requirements.txt
+   pip install -r requirements.txt
    ```
 
 3. Make sure the Poppins-Medium.ttf font is in the `assets/fonts/` directory.
