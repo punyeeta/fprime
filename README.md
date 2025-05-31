@@ -70,7 +70,7 @@ python gui.py
 - All assets are loaded from relative paths, making the application portable across different operating systems.
 - The integration is performed using scipy.integrate.quad(), which provides a numerical approximation of the integral.
 
-## Developeers
+## Developers
 
 | Avatar | Name | GitHub |
 |--------|------|--------|
